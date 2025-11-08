@@ -29,8 +29,5 @@ dev = [
     "ipykernel>=6.29.5",
 ]
 
-[tool.setuptools.packages.find]
-where = ["src"]
-
 [tool.setuptools]
 package-mode = false
