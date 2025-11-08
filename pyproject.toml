@@ -29,5 +29,8 @@ dev = [
     "ipykernel>=6.29.5",
 ]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.poetry]
+package-mode = false
+
+#[tool.setuptools.packages.find]
+#where = ["src"]
