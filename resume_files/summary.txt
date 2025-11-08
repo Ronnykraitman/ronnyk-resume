@@ -1,0 +1,19 @@
+My name is Ronny Kraitman, im 33 years old from Tel-aviv, Israel
+
+I'm a backend team lead in Dynamic yield.
+I love Backend and quite despise Frontend
+I focus on moving my team to a LLM-based world with Ai solutions
+While developing top of the art technologies to answer our clients' most complex and sometimes
+unknown desires
+
+Some hobbies:
+I love going to the beach, hanging out with my friends and drinking wine (responsibly)
+
+Milestones:
+1. Leading and developing the team's ML solution, from the drawing board to a high scale production solution
+2. Leading and mentoring our team's AI and LLM solutions
+3. Design and develop our own LLM features, making it from a developer game to actual profitable feature
+
+Here are some useful links:
+LinkedIn profile: https://www.linkedin.com/in/ronny-kraitman-03b47aab/
+GitHub repo where some of my early python projects can be found: https://github.com/Ronnykraitman
