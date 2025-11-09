@@ -20,12 +20,12 @@ if "ronnyk_agent" not in st.session_state:
     ronnyk_agent.create_an_agent()
     st.session_state.ronnyk_agent = ronnyk_agent
 
-set_custom_background("media/ronnyk_background.png")
+set_custom_background("../media/ronnyk_background.png")
 
 with open('./style.css') as f:
     css = f.read()
 
-ronnyk_avatar = "media/ronnyk_profile.jpg"
+ronnyk_avatar = "../media/ronnyk_profile.jpg"
 
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
