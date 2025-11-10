@@ -9,7 +9,7 @@ from tools.py_tools import set_custom_background
 
 st.set_page_config(
     page_title="Ronny Kraitman",
-    page_icon=":tada:",
+    page_icon="🤓",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
