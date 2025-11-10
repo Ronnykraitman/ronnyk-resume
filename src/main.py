@@ -29,15 +29,15 @@ if "ronnyk_agent" not in st.session_state:
     st.session_state.ronnyk_agent = ronnyk_agent
 
 user_avatar_options = [
-    "media/avatar_1.png",
-    "media/avatar_2.png",
-    "media/avatar_3.png",
-    "media/avatar_4.png",
-    "media/avatar_5.png",
-    "media/avatar_6.png",
-    "media/avatar_7.png",
-    "media/avatar_8.png",
-    "media/avatar_9.png"
+    "../media/avatar_1.png",
+    "../media/avatar_2.png",
+    "../media/avatar_3.png",
+    "../media/avatar_4.png",
+    "../media/avatar_5.png",
+    "../media/avatar_6.png",
+    "../media/avatar_7.png",
+    "../media/avatar_8.png",
+    "../media/avatar_9.png"
 ]
 
 if "user_avatar" not in st.session_state:
