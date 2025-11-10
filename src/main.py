@@ -1,7 +1,10 @@
+import random
+
 import streamlit as st
 import time
 
 from agent import RonnykAgent
+from tools.agent_tools import display_agent_answer
 from tools.py_tools import set_custom_background
 
 st.set_page_config(
@@ -25,25 +28,30 @@ if "ronnyk_agent" not in st.session_state:
     ronnyk_agent.create_an_agent()
     st.session_state.ronnyk_agent = ronnyk_agent
 
+user_avatar_options = [
+    "media/avatar_1.png",
+    "media/avatar_2.png",
+    "media/avatar_3.png",
+    "media/avatar_4.png",
+    "media/avatar_5.png",
+    "media/avatar_6.png",
+    "media/avatar_7.png",
+    "media/avatar_8.png",
+    "media/avatar_9.png"
+]
+
+if "user_avatar" not in st.session_state:
+    st.session_state.user_avatar = random.choice(user_avatar_options)
+
 set_custom_background("../media/ronnyk_background.png")
 
 with open('../style.css') as f:
     css = f.read()
 
-ronnyk_avatar = "../media/ronnyk_profile.jpg"
+ronnyk_avatar = "../media/ronnyk_avatar.jpg"
 
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
-
-def display_agent_answer(response_text):
-    full_response = ""
-    message_placeholder = st.empty()
-    for chunk in response_text.split():
-        full_response += chunk + " "
-        time.sleep(0.10)
-        message_placeholder.markdown(full_response + "▌")
-
-    message_placeholder.markdown(full_response)
 
 if __name__ == "__main__":
     col_1, col_2 = st.columns([3,2.5])
@@ -66,13 +74,13 @@ if __name__ == "__main__":
         with st.container(height=400, border=None):
 
             for message in st.session_state.messages:
-                avatar = ronnyk_avatar if message["role"] == "assistant" else "user"
+                avatar = ronnyk_avatar if message["role"] == "assistant" else st.session_state.user_avatar
                 with st.chat_message(message["role"], avatar=avatar):
                     st.markdown(message["content"])
 
             if prompt:
                 st.session_state.messages.append({"role": "user", "content": prompt})
-                with st.chat_message("user", avatar="user"):
+                with st.chat_message("user", avatar=st.session_state.user_avatar):
                     st.markdown(prompt)
 
                 agent_response = st.session_state.ronnyk_agent.chat(prompt)
