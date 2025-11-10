@@ -4,7 +4,12 @@ import time
 from agent import RonnykAgent
 from tools.py_tools import set_custom_background
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="Ronny Kraitman",
+    page_icon=":tada:",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
 
 if "messages_history" not in st.session_state:
     st.session_state.messages_history = []
