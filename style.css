@@ -1,3 +1,6 @@
+header {visibility: hidden !important;}
+footer {visibility: hidden !important;}
+
 @keyframes fadeUp {
     to {
         opacity: 1;
