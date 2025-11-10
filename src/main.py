@@ -8,7 +8,7 @@ st.set_page_config(
     page_title="Ronny Kraitman",
     page_icon=":tada:",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="collapsed"
 )
 
 if "messages_history" not in st.session_state:
